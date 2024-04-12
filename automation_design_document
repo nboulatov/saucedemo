@@ -1,0 +1,75 @@
+Project Overview:
+The project aims to automate testing for a saucedemo.com web application using Python, Selenium, Behave, and the Page Object Model (POM) design pattern.
+
+Technologies Used:
+Python: Programming language used for test automation.
+Selenium: Web automation framework for interacting with web elements.
+Behave: BDD framework for writing human-readable test scenarios.
+Page Object Model (POM): Design pattern for organizing and maintaining automation code.
+
+Project Structure:
+The project follows a modular structure with separate directories for features, step definitions, and page objects.
+project/
+│
+├── app/
+│   └── application.py
+├── features/
+│   ├── steps/
+|       ├── cart_page_steps.py
+|       ├── generic_steps.py
+|       ├── inventory_page_steps.py
+|       └── main_page_steps.py
+    ├── tests/
+│       └── saucedemo.feature
+│   └── environment.py
+├── pages/
+│   ├── base_page.py
+│   ├── cart_page.py
+│   ├── inventory_page.py
+│   └── main_page.py
+├── requirements.txt
+└── .gitignore
+
+Description:
+features: Contains .feature files written in Gherkin syntax, defining test scenarios.
+steps: Contains Python files with step definitions corresponding to feature files.
+pages: Contains page object classes representing different pages of the web application.
+environment.py: Contains setup and teardown code for the testing environment.
+requirements.txt: Contains a list of dependencies that are required for a Python project to run
+.gitignore: Used to specify intentionally untracked files that Git should ignore
+
+Implementation Details:
+Page Object Model (POM):
+Each page of the web application has a corresponding page object class.
+Page object classes encapsulate the functionality and locators of web elements on the respective pages.
+Methods in page objects are used to interact with web elements and perform actions.
+
+Behave for BDD:
+Behave allows writing test scenarios in a human-readable format using Gherkin syntax.
+Step definitions in Python correspond to steps in feature files.
+Step definitions invoke methods from page objects to interact with web elements.
+
+Python with Selenium:
+Python scripts are used for test automation.
+Selenium WebDriver is used for browser automation and interaction with web elements.
+WebDriver methods are called from page objects and step definitions to perform actions like clicking buttons, entering text, and verifying elements.
+
+Scalability:
+
+Page Object Model (POM):
+POM provides a scalable structure for organizing automation code.
+New page object classes can be easily added for additional pages or features of the application.
+Existing page objects can be extended or modified without impacting other parts of the codebase.
+
+Behave for BDD:
+Behave encourages collaboration between stakeholders, testers, and developers through human-readable feature files.
+New test scenarios can be added by writing feature files with descriptive scenarios.
+Step definitions can be reused across multiple feature files, promoting code reusability and maintainability.
+
+Python with Selenium:
+Python's modular and object-oriented nature allows for easy scaling of test automation code.
+New test cases can be added by creating additional step definitions and feature files.
+Selenium's extensive capabilities enable testing of complex web applications with ease.
+
+Conclusion:
+The combination of Page Object Model, Behave, and Python with Selenium provides a robust framework for automated testing. This design automation document outlines the project structure, implementation details, and scalability aspects, ensuring efficient test automation for web applications.
