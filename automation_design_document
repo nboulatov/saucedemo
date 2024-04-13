@@ -31,6 +31,7 @@ project/
 └── .gitignore
 
 Description:
+application: Serves as an interface for managing interactions with different pages during automated testing or web scraping
 features: Contains .feature files written in Gherkin syntax, defining test scenarios.
 steps: Contains Python files with step definitions corresponding to feature files.
 pages: Contains page object classes representing different pages of the web application.
