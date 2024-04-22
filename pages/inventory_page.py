@@ -1,7 +1,7 @@
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-
+from pages.header import Header
 
 class InventoryPage(BasePage):
     default_inventory_names = []
@@ -19,7 +19,7 @@ class InventoryPage(BasePage):
         add_to_cart_buttons = self.driver.find_elements(*self.ALL_ADD_TO_CART_BUTTONS)
         for i in range(int(number_of_items)):
             add_to_cart_buttons[i].click()
-        cart_badge_text = self.find_element(*self.SHOPPING_CART_LINK).text
+        cart_badge_text = self.find_element(*Header.SHOPPING_CART_LINK).text
         assert number_of_items == cart_badge_text, f"\nExpected: {number_of_items}.\nActual: {cart_badge_text}"
 
     def get_default_data(self):

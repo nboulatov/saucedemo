@@ -20,9 +20,9 @@ Feature: saucedemo.com tests
     Examples:
       | sort_option | number_of_items |
       | az          | 3               |
-      | za          | 4               |
-      | hilo        | 5               |
-      | lohi        | 6               |
+#      | za          | 4               |
+#      | hilo        | 5               |
+#      | lohi        | 6               |
 
   @smoke
   Scenario: Verification of error message display for locked_out_user

@@ -8,12 +8,12 @@ def open_saucedemo(context, url):
 
 @when('I logout')
 def logout(context):
-    context.app.base_page.log_out()
+    context.app.header.log_out()
 
 
 @when('I click shopping cart icon')
 def click_shopping_cart_icon(context):
-    context.app.base_page.click_shopping_cart_icon()
+    context.app.header.click_shopping_cart_icon()
 
 
 @then('I see URL contains text: {expected_text_in_url}')
